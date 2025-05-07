@@ -19,7 +19,6 @@ ULTIDEX is a small personal project designed to help me learn fullstack developm
 - **Frontend:** HTML, CSS, JavaScript (Vanilla)
 - **Backend:** Python (Flask)
 - **Database:** SQLite
-- **Data Source:** [PokéAPI](https://pokeapi.co/)
 
 ---
 
