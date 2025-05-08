@@ -1,6 +1,6 @@
 # initialise app w/flask
 from flask import Flask
-
+from flask_cors import CORS
 
 # blueprint import
 from api.pokemon import pokemon_bp
@@ -10,6 +10,7 @@ from api.regions import regions_bp
 from api.stats import stats_bp
 
 app = Flask(__name__)
+CORS(app)
 
 # registering the blueprints
 app.register_blueprint(pokemon_bp, url_prefix="/api/pokemon")
