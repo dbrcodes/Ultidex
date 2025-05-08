@@ -8,7 +8,7 @@ pokemon_bp = Blueprint("pokemon", __name__)
 # define the route
 @pokemon_bp.route("/")  # define the endpoint at /api/pokemon/
 def get_all_pokemon():
-    conn = sqlite3.connect()  # connect to an SQLite file
+    conn = sqlite3.connect("db/ultidex.db")  # connect to an SQLite file
     cursor = conn.cursor()
     cursor.execute(
         "SELECT * FROM pokemon"
