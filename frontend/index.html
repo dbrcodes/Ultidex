@@ -4,10 +4,187 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <h1>Hello</h1>
+  <body id="container">
+    <div>
+      <section id="sidebar">
+        <h1 id="main-header">Pokedex</h1>
+        <section id="search">
+          <p>Search name</p>
+          <input class="searchbar" type="text" />
+          <p>Matches</p>
+          <select name="" id="results">
+            <option value="Bulbasaur">Bulbasaur</option>
+          </select>
+          <p>Filters</p>
+          <div id="filters">
+            <label for="basic-info"
+              >Basic Information
+              <input type="checkbox" name="basic info" id="basic-info"
+            /></label>
+            <label for="base-stats"
+              >Base Stats
+              <input type="checkbox" name="base stats" id="base-stats"
+            /></label>
+            <label for="type-offence"
+              >Type Offence
+              <input type="checkbox" name="type offence" id="type-offence"
+            /></label>
+            <label for="type-defence"
+              >Type Defence
+              <input type="checkbox" name="type defence" id="type-defence"
+            /></label>
+            <label for="locations"
+              >Locations <input type="checkbox" name="locations" id="locations"
+            /></label>
+          </div>
+          <div id="stat-filter">
+            <h4>Search Base Stat Range</h4>
+            <label for="hp">HP</label>
+            <div class="statSlider">
+              <div class="statControl">
+                <input
+                  type="range"
+                  name="HP"
+                  id="hp"
+                  min="0"
+                  max="250"
+                  value="0"
+                />
+                <input
+                  type="number"
+                  name="HPInput"
+                  id="hpInput"
+                  class="statInput"
+                  min="0"
+                  max="250"
+                  value="0"
+                />
+              </div>
+            </div>
 
-    <iframe src="" frameborder="0"></iframe>
+            <label for="attack">Attack</label>
+            <div class="statSlider">
+              <div class="statControl">
+                <input
+                  type="range"
+                  name="Attack"
+                  id="atk"
+                  min="0"
+                  max="250"
+                  value="0"
+                />
+                <input
+                  type="number"
+                  name="AttackInput"
+                  id="atkInput"
+                  class="statInput"
+                  min="0"
+                  max="250"
+                  value="0"
+                />
+              </div>
+            </div>
+
+            <label for="Defense">Defense</label>
+            <div class="statSlider">
+              <div class="statControl">
+                <input
+                  type="range"
+                  name="Defense"
+                  id="def"
+                  min="0"
+                  max="250"
+                  value="0"
+                />
+                <input
+                  type="number"
+                  name="DefenseInput"
+                  id="defInput"
+                  class="statInput"
+                  min="0"
+                  max="250"
+                  value="0"
+                />
+              </div>
+            </div>
+
+            <label for="spAtk">Sp.Attack</label>
+            <div class="statSlider">
+              <div class="statControl">
+                <input
+                  type="range"
+                  name="SpAtkInput"
+                  id="spAtk"
+                  min="0"
+                  max="250"
+                  value="0"
+                />
+                <input
+                  type="number"
+                  name="SpAtkInput"
+                  id="spAtkInput"
+                  class="statInput"
+                  min="0"
+                  max="250"
+                  value="0"
+                />
+              </div>
+            </div>
+
+            <label for="spDef">Sp.Defense</label>
+            <div class="statSlider">
+              <div class="statControl">
+                <input
+                  type="range"
+                  name="SpDef"
+                  id="spDef"
+                  min="0"
+                  max="250"
+                  value="0"
+                />
+                <input
+                  type="number"
+                  name="SpDefInput"
+                  id="spDefInput"
+                  class="statInput"
+                  min="0"
+                  max="250"
+                  value="0"
+                />
+              </div>
+            </div>
+
+            <label for="spd">Speed</label>
+            <div class="statSlider">
+              <div class="statControl">
+                <input
+                  type="range"
+                  name="SpD"
+                  id="spd"
+                  min="0"
+                  max="250"
+                  value="0"
+                />
+                <input
+                  type="number"
+                  name="SpdInput"
+                  id="spdInput"
+                  class="statInput"
+                  min="0"
+                  max="250"
+                  value="0"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+    <div>
+      <h1>Section 2</h1>
+    </div>
+    <script src="app.js"></script>
   </body>
 </html>
