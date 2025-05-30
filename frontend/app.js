@@ -6,7 +6,7 @@ fetch('http://localhost:5000/api/pokemon/') // backend request
   });
 
 // page scripts
-const statIds = ['hp', 'attack', 'defense', 'spAtk', 'spDef', 'spd'];
+const statIds = ['hp', 'atk', 'def', 'spAtk', 'spDef', 'spd'];
 
 statIds.forEach((id) => {
   const range = document.getElementById(id);
