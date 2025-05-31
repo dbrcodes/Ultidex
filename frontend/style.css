@@ -35,7 +35,7 @@ div {
   margin-top: 10px;
   padding: 5px;
 }
-.searchbar,
+#searchbar,
 #results {
   border: 1px solid white;
   border-radius: 5px;
@@ -61,4 +61,31 @@ input[type="range"] {
 
 input[type="number"] {
   width: 100%;
+}
+#info {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 70px;
+  width: 100%;
+}
+#main-sect {
+  display: flex;
+  justify-content: space-around;
+}
+.avatar {
+  height: 150px;
+}
+.poke-info {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  color: grey;
+  font-weight: bold;
+  font-size: 13px;
+}
+.detail {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
 }

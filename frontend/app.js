@@ -23,3 +23,35 @@ statIds.forEach((id) => {
     range.value = val;
   });
 });
+
+// search function
+const searchInput = document.getElementById("searchbar");
+const resultsDropdown = document.getElementById("results");
+
+searchInput.addEventListener("input", async () => {
+  const query = searchInput.value.trim();
+
+  // Clear old results
+  resultsDropdown.innerHTML = "";
+
+  // Skip empty queries
+  if (!query) return;
+
+  try {
+    const res = await fetch(`http://localhost:5000/api/pokemon/search?name=${encodeURIComponent(query)}`);
+    const data = await res.json();
+
+    if (res.ok) {
+      data.forEach(pokemon => {
+        const option = document.createElement("option");
+        option.value = pokemon.id; // You can use this to link to details later
+        option.textContent = `${pokemon.name} (#${pokemon.nat_dex_id})`;
+        resultsDropdown.appendChild(option);
+      });
+    } else {
+      console.error("API error:", data);
+    }
+  } catch (err) {
+    console.error("Fetch error:", err);
+  }
+});

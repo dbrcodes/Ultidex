@@ -12,11 +12,13 @@
         <h1 id="main-header">Pokedex</h1>
         <section id="search">
           <p>Search name</p>
-          <input class="searchbar" type="text" />
+          <input
+            id="searchbar"
+            type="text"
+            placeholder="Enter Pokemon Name..."
+          />
           <p>Matches</p>
-          <select name="" id="results">
-            <option value="Bulbasaur">Bulbasaur</option>
-          </select>
+          <select name="" id="results"></select>
           <p>Filters</p>
           <div id="filters">
             <label for="basic-info"
@@ -188,8 +190,56 @@
         </section>
       </section>
     </div>
-    <div>
-      <h1>Section 2</h1>
+    <div id="info">
+      <h1 id="name">Section 2</h1>
+      <div id="main-sect">
+        <div class="first">
+          <img src="../img/pokemon_images/1.png" alt="" class="avatar" />
+        </div>
+
+        <div class="middle poke-info">
+          <div class="poke-info">
+            <p class="title">Type</p>
+            <img
+              src="../img/icons/70px-FireIC_SV.png"
+              alt=""
+              class="primary-type"
+            />
+            <img
+              src="../img/icons/70px-FightingIC_SV.png"
+              alt=""
+              class="secondary-type"
+            />
+          </div>
+          <p class="title">Height</p>
+          <p class="detail">2.2m</p>
+          <p class="title">Weight</p>
+          <p class="detail">210.0kg</p>
+        </div>
+
+        <div class="last poke-info">
+          <div class="species poke-info">
+            <p class="title">Species</p>
+            <p class="detail">Dragon</p>
+          </div>
+          <div id="abilities" class="poke-info">
+            <p class="title">Abilities</p>
+            <p class="primary-ability detail">Ability 1</p>
+            <p class="secondary-ability detail">Ability 2</p>
+          </div>
+        </div>
+      </div>
+      <div id="info2">
+        <div>
+          <h3>Base Stats</h3>
+        </div>
+        <div>
+          <h3>Type Offence</h3>
+        </div>
+        <div>
+          <h3>Type Defense</h3>
+        </div>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>
