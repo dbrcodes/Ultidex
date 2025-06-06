@@ -94,19 +94,19 @@ function populateSectionTwo(pokemon) {
 
   // Image
   const avatar = document.getElementById("avatar");
-  avatar.setAttribute("src", `../img/pokemon_images/${pokemon.nat_dex_id}.png`);
+  avatar.setAttribute("src", `img/pokemon_images/${pokemon.nat_dex_id}.png`);
 
   // types
   const primaryType = document.querySelector(".primary-type")
   const secondaryType = document.querySelector(".secondary-type")
 
   if (pokemon.primary_type_id) {
-    primaryType.setAttribute("src", `../img/icons/${pokemon.primary_type_id}.png`);
+    primaryType.setAttribute("src", `img/icons/${pokemon.primary_type_id}.png`);
     primaryType.style.display = "inline";
   }
 
   if (pokemon.secondary_type_id) {
-    secondaryType.setAttribute("src", `../img/icons/${pokemon.secondary_type_id}.png`);
+    secondaryType.setAttribute("src", `img/icons/${pokemon.secondary_type_id}.png`);
     secondaryType.style.display = "inline";
   } else {
     secondaryType.style.display = "none";
