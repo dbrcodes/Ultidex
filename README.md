@@ -56,25 +56,25 @@ ULTIDEX/
 
 ## 🧪 TODO / Roadmap
 
-* [ ] Add filter by type or stat
-* [ ] Add favourites (localStorage or DB)
-* [ ] Add pagination
-* [ ] Host the project online
+- [ ] Add filter by type or stat
+- [ ] Add favourites (localStorage or DB)
+- [ ] Add pagination
+- [ ] Host the project online
 
 ---
 
 ## 📚 Learning Goals
 
-* Practice frontend/backend separation
-* Learn SQLite queries and schema design
-* Understand how frontend fetches and displays backend data
-* Build a basic REST API without frameworks
+- Practice frontend/backend separation
+- Learn SQLite queries and schema design
+- Understand how frontend fetches and displays backend data
+- Build a basic REST API without frameworks
 
 ---
 
 ## 🔗 Acknowledgments
 
-* Pokémon data from [PokéAPI](https://pokeapi.co/)
-* Icons and sprites by Game Freak / Nintendo
+- Pokémon data from [PokéAPI](https://pokeapi.co/)
+- Icons and sprites by Game Freak / Nintendo
 
 ---
