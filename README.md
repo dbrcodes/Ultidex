@@ -24,15 +24,13 @@ ULTIDEX is a small personal project designed to help me learn fullstack developm
 
 ## 📁 Project Structure
 
-```
-
+```text
 ULTIDEX/
 ├── db/             # Region and metadata .sql files
 ├── frontend/            # HTML, CSS, JS files
 ├── backend/        # Python server and DB logic
 ├── README.md
 └── requirements.txt
-
 ```
 
 ---
@@ -41,15 +39,17 @@ ULTIDEX/
 
 1. **Clone the repo**
 2. **Install dependencies**
+
    ```bash
    pip install -r requirements.txt
-```
+   ```
 
 3. **Run the Flask server**
 
    ```bash
    python Backend/app.py
    ```
+
 4. **Open `Web/index.html` in your browser**
 
 ---
