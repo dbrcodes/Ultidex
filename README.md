@@ -77,6 +77,4 @@ ULTIDEX/
 * Pokémon data from [PokéAPI](https://pokeapi.co/)
 * Icons and sprites by Game Freak / Nintendo
 
-```
-
 ---
