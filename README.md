@@ -33,7 +33,7 @@ ULTIDEX/
 ├── README.md
 └── requirements.txt
 
-````
+```
 
 ---
 
@@ -43,7 +43,7 @@ ULTIDEX/
 2. **Install dependencies**
    ```bash
    pip install -r requirements.txt
-````
+```
 
 3. **Run the Flask server**
 
