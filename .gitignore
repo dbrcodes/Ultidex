@@ -1,0 +1,5 @@
+#ignore all files
+*
+
+# Ignore all files except those explicitly whitelisted below
+!.gitignore
