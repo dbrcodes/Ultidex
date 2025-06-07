@@ -56,10 +56,19 @@ ULTIDEX/
 
 ## 🧪 TODO / Roadmap
 
-- [ ] Add filter by type or stat
-- [ ] Add favourites (localStorage or DB)
-- [ ] Add pagination
+- [ ] Create and populate database(SQLite at the moment, may upgrade)
+- [ ] Create backend linking the app to the database
+- [ ] Create frontend that links to backend
 - [ ] Host the project online
+
+Once successfully online, features will be added/updated/upgraded such as:
+
+- [ ] Update filter by type or stat
+- [ ] Add favourites (localStorage or DB)
+- [ ] Add Movedex
+- [ ] Add Itemdex
+- [ ] Add Teambuilder
+- [ ] Counters(for things like shiny hunting, though, its quite easy in the newer games)
 
 ---
 
@@ -74,7 +83,6 @@ ULTIDEX/
 
 ## 🔗 Acknowledgments
 
-- Pokémon data from [PokéAPI](https://pokeapi.co/)
 - Icons and sprites by Game Freak / Nintendo
 
 ---
