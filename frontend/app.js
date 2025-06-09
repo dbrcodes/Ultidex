@@ -112,5 +112,36 @@ function populateSectionTwo(pokemon) {
     secondaryType.style.display = "none";
   }
 
+  // Stats
+  let statLabels = ["hp", "atk", "def", "spAtk", "spDef", "spd"];
+  let stats = [50, 50, 50, 50, 50, 50]; // Default values
+
+  const statData = {
+    labels: statLabels,
+    datasets: [{
+      label: 'Base Stats',
+      data: stats,
+      backgroundColor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(255, 159, 64, 0.2)'
+      ],
+    }]
+  };
+
+  const config = {
+    type: 'bar',
+    data: statData,
+    options: {}
+  }
+
+  const statChart = new Chart(
+    document.getElementById('statChart'),
+    config
+  );
+
   // Placeholder: You can add more like height, weight, species, abilities, stats, etc.
 }
