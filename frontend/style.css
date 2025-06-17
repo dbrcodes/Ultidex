@@ -96,3 +96,10 @@ input[type="number"] {
   gap: 10px;
   width: 100%;
 }
+#baseStats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+  width: 100%;
+}

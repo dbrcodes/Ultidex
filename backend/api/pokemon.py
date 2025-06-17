@@ -33,14 +33,28 @@ def get_pokemon_by_id(nat_dex_id):
     conn.row_factory = sqlite3.Row
     cur = conn.cursor()
 
+    # Step 1: Get the Pokémon entry
     cur.execute("SELECT * FROM pokemon WHERE nat_dex_id = ?", (nat_dex_id,))
-    row = cur.fetchone()
-    conn.close()
+    pokemon_row = cur.fetchone()
 
-    if row is None:
+    if pokemon_row is None:
+        conn.close()
         return jsonify({"error": "Pokémon not found"}), 404
 
-    return jsonify(dict(row))
+    # Convert to dict
+    pokemon = dict(pokemon_row)
+
+    # Step 2: Get the stats (base form only, no form_id)
+    cur.execute(
+        "SELECT * FROM stats WHERE pokemon_id = ? AND form_id IS NULL", (pokemon["id"],)
+    )
+    stats_row = cur.fetchone()
+
+    if stats_row:
+        pokemon["stats"] = dict(stats_row)
+
+    conn.close()
+    return jsonify(pokemon)
 
 
 # define the endpoint for individual pokemon forms
@@ -87,7 +101,9 @@ def search_pokemon():
     cur = conn.cursor()
 
     like_pattern = f"%{name_query}%"
-    cur.execute("SELECT * FROM pokemon WHERE name LIKE ?", (like_pattern,))
+    cur.execute(
+        "SELECT id, name, nat_dex_id FROM pokemon WHERE name LIKE ?", (like_pattern,)
+    )
     results = cur.fetchall()
     conn.close()
 

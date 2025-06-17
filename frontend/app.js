@@ -1,3 +1,5 @@
+let statChart = null;
+
 fetch('http://localhost:5000/api/pokemon/') // backend request
   .then(res => res.json()) // convert response from http to JS object
   .then(data => {
@@ -112,36 +114,73 @@ function populateSectionTwo(pokemon) {
     secondaryType.style.display = "none";
   }
 
+  // Details
+
   // Stats
-  let statLabels = ["hp", "atk", "def", "spAtk", "spDef", "spd"];
-  let stats = [50, 50, 50, 50, 50, 50]; // Default values
+  let statLabels = [
+    `HP (${pokemon.stats.hp})`,
+    `Attack (${pokemon.stats.attack})`,
+    `Defense (${pokemon.stats.defense})`,
+    `Sp.Atk (${pokemon.stats.sp_attack})`,
+    `Sp.Def (${pokemon.stats.sp_defense})`,
+    `Speed (${pokemon.stats.speed})`
+  ];
+  const stats = [
+    pokemon.stats.hp,
+    pokemon.stats.attack,
+    pokemon.stats.defense,
+    pokemon.stats.sp_attack,
+    pokemon.stats.sp_defense,
+    pokemon.stats.speed
+  ];
 
-  const statData = {
-    labels: statLabels,
-    datasets: [{
-      label: 'Base Stats',
-      data: stats,
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)'
-      ],
-    }]
-  };
+  console.log("Creating/updating chart for", pokemon.name, stats);
 
-  const config = {
-    type: 'bar',
-    data: statData,
-    options: {}
+  if (statChart) {
+    // Chart already exists → update its data
+    statChart.data.labels = statLabels;
+    statChart.data.datasets[0].data = stats;
+    statChart.update();
+  } else {
+    // First time → create the chart
+    const statData = {
+      labels: statLabels,
+      datasets: [{
+        label: 'Base Stats',
+        data: stats,
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+      }]
+    };
+
+    const config = {
+      type: 'radar',
+      data: statData,
+      options: {
+        responsive: true,
+        scales: {
+          r: {
+            beginAtZero: true,
+            max: 255,
+            ticks: {
+              display: false,
+            },
+            pointLabels: {
+              font: {
+                size: 15
+              }
+            }
+          }
+        }
+      }
+    };
+
+    statChart = new Chart(
+      document.getElementById('statChart'),
+      config
+    );
+
+    // Placeholder: You can add more like height, weight, species, abilities, stats, etc.
   }
-
-  const statChart = new Chart(
-    document.getElementById('statChart'),
-    config
-  );
-
-  // Placeholder: You can add more like height, weight, species, abilities, stats, etc.
 }

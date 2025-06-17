@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.js"
-      integrity="sha512-7DgGWBKHddtgZ9Cgu8aGfJXvgcVv4SWSESomRtghob4k4orCBUTSRQ4s5SaC2Rz+OptMqNk0aHHsaUBk6fzIXw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js"></script>
   </head>
   <body id="container">
     <div>
@@ -211,15 +206,15 @@
             <img src=" " alt="" class="secondary-type" />
           </div>
           <p class="title">Height</p>
-          <p class="detail">2.2m</p>
+          <p class="detail height-d">2.2m</p>
           <p class="title">Weight</p>
-          <p class="detail">210.0kg</p>
+          <p class="detail weight-d">210.0kg</p>
         </div>
 
         <div class="last poke-info">
           <div class="species poke-info">
             <p class="title">Species</p>
-            <p class="detail">Dragon</p>
+            <p class="detail species-d">Dragon</p>
           </div>
           <div id="abilities" class="poke-info">
             <p class="title">Abilities</p>
@@ -229,9 +224,9 @@
         </div>
       </div>
       <div id="info2">
-        <div>
+        <div id="baseStats">
           <h3>Base Stats</h3>
-          <div style="width: 300px; height: 200px">
+          <div style="width: 400px; height: 300px">
             <canvas id="statChart"></canvas>
           </div>
         </div>
