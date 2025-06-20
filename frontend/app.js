@@ -115,6 +115,31 @@ function populateSectionTwo(pokemon) {
   }
 
   // Details
+  document.getElementById("height-d").textContent = pokemon.height_m + "m";
+  document.getElementById("weight-d").textContent = pokemon.weight_kg + "kg";
+  document.getElementById("species-d").textContent = pokemon.species;
+
+  // Abilities
+  // const primaryA = document.querySelector("#primary-ability")
+  const secondaryA = document.querySelector("#secondary-ability")
+  const hiddenA = document.querySelector("#hidden-ability")
+
+  document.getElementById("primary-ability").textContent = "Ability 1: " + pokemon.ability_1;
+
+  if (pokemon.ability_2) {
+    document.getElementById("secondary-ability").textContent = "Ability 2: " + pokemon.ability_2;
+  } else {
+    secondaryA.style.display = "none";
+  }
+
+  if (pokemon.ability_hidden) {
+    document.getElementById("hidden-ability").textContent = "Hidden Ability: " + pokemon.ability_hidden;
+  } else {
+    hiddenA.style.display = "none";
+  }
+
+
+
 
   // Stats
   let statLabels = [
