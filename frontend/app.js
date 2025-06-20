@@ -121,17 +121,17 @@ function populateSectionTwo(pokemon) {
     `HP (${pokemon.stats.hp})`,
     `Attack (${pokemon.stats.attack})`,
     `Defense (${pokemon.stats.defense})`,
-    `Sp.Atk (${pokemon.stats.sp_attack})`,
+    `Speed (${pokemon.stats.speed})`,
     `Sp.Def (${pokemon.stats.sp_defense})`,
-    `Speed (${pokemon.stats.speed})`
+    `Sp.Atk (${pokemon.stats.sp_attack})`
   ];
   const stats = [
     pokemon.stats.hp,
     pokemon.stats.attack,
     pokemon.stats.defense,
-    pokemon.stats.sp_attack,
+    pokemon.stats.speed,
     pokemon.stats.sp_defense,
-    pokemon.stats.speed
+    pokemon.stats.sp_attack
   ];
 
   console.log("Creating/updating chart for", pokemon.name, stats);

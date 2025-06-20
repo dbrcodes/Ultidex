@@ -16,7 +16,7 @@ ULTIDEX is a small personal project designed to help me learn fullstack developm
 
 ## 🧰 Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript (Vanilla)
+- **Frontend:** HTML, CSS, JavaScript(Vanilla), Chart.JS
 - **Backend:** Python (Flask)
 - **Database:** SQLite
 
